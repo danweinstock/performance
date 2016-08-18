@@ -3,8 +3,9 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    uglify = require('gulp-uglify'),
+    uglifyjs = require('gulp-uglify'),
     concat = require('gulp-concat'),
+    uglifycss = require('gulp-clean-css'),
     browserSync = require('browser-sync');
 
 var plumberErrorHandler = {
@@ -23,10 +24,15 @@ gulp.task('sass', function() {
       }))
       .pipe(gulp.dest('./build/css'))
 });
-
+gulp.task('css', function(){
+  gulp.src('./build/css/*.css')
+    .pipe(uglifycss())
+    .pipe(concat('all.css'))
+    .pipe(gulp.dest('./build/css'))
+})
 gulp.task('scripts', function(){
     gulp.src('./js/**/*.js')
-      .pipe(uglify())
+      .pipe(uglifyjs())
       .pipe(concat('all.js'))
       .pipe(gulp.dest('./build/js'))
 });
