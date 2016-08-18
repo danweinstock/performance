@@ -5,12 +5,12 @@
   box-sizing: border-box;
   outline: none; }
 
-strong, b, strong *, b * {
+/*strong, b, strong *, b * {
   font-style: normal;
-  font-weight: bold !important; }
+  font-weight: bold !important; }*/
 
-em, i, em *, i * {
-  font-style: italic; }
+/*em, i, em *, i * {
+  font-style: italic; }*/
 
 fieldset,
 img,
