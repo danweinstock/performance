@@ -33,6 +33,14 @@ body {
   background-size: cover; }
 
 /* Typography */
+@font-face{
+  font-family: "Source Sans Pro";
+  src: url(../../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf);
+}
+@font-face{
+  font-family: "Droid Serif";
+  src: url(../../fonts/Droid_Serif/DroidSerif.ttf);
+}
 body,
 button,
 input {
