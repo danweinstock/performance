@@ -3,3 +3,4 @@ build/css/reset.css
 build/css/style.css
 js/main.js
 js/jquery-3.1.0.js
+js/vendor
